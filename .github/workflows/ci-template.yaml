@@ -230,12 +230,12 @@ jobs:
           firstRunWhatIf: 'true'
           firstDeployment: '${{ env.firstDeployment }}'
           whatIfEnabled: 'true'
-      - name: 'What If: Hub (Hub-and-Spoke) Multi-Region Deployment'
+      - name: 'What If: Hub (Hub-and-Spoke) Deployment'
         uses: IngridFabrikken/alzacc-mgmt-templates/.github/actions/bicep-deploy@main
         with:
-          displayName: 'Hub (Hub-and-Spoke) Multi-Region Deployment'
-          templateFilePath: './infra-as-code/bicep/modules/hubNetworking/hubNetworking-multiRegion.bicep'
-          templateParametersFilePath: './config/custom-parameters/hubNetworking.parameters.multiRegion.all.json'
+          displayName: 'Hub (Hub-and-Spoke) Deployment'
+          templateFilePath: './infra-as-code/bicep/modules/hubNetworking/hubNetworking.bicep'
+          templateParametersFilePath: './config/custom-parameters/hubNetworking.parameters.all.json'
           managementGroupId: ''
           subscriptionId: '${{ env.CONNECTIVITY_SUBSCRIPTION_ID }}'
           resourceGroupName: '${{ env.CONNECTIVITY_RESOURCE_GROUP }}'
